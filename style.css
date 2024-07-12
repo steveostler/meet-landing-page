@@ -254,6 +254,10 @@ footer .button1{
       gap :0;
    }
 
+   footer .button1{
+      width: 220px;
+   }
+
    .footer-wrap{
       flex-direction: row;
       max-width: 1110px;
