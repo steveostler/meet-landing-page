@@ -1,0 +1,252 @@
+:root {
+    --primary-dark-blue: hsl(192,37%,48%);
+    --primary-dark-purple: hsl(268, 34%, 53%);
+    --primary-very-dark: hsl(240, 21%, 20%);
+    --primary-gray: hsl(240,10%,57%);
+
+    --neutral-light-blue: hsl(192, 90%, 77%);
+    --neutral-light-purple: hsl(268, 100%, 86%);
+    --neutral-white: hsl(0, 0%, 98%); 
+}
+
+body{
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size:18px;
+    font-family: "Red Hat Display", sans-serif;
+    line-height: 26px;
+    font-weight: 300;
+    background-color: var(--neutral-light-grayish-blue);
+    display: grid;
+    min-height: 100vh;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+header{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+}
+
+header p{
+   
+   margin:0 1rem 2rem 1rem;
+}
+
+.header-wrapper{
+   max-width: 400px;
+}
+.logo{
+   width:119px;
+   margin-bottom: 2rem;
+}
+
+.hero {
+   margin-bottom: 2rem;
+
+}
+.left-image, .right-image{
+   display: none;
+}
+
+button{
+   height: 58px;
+   border-radius: 29px;
+   border: 0;
+   color:var(--neutral-white);
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.button1{
+   background-color: #4d96a9;
+   width:193px;  
+}
+
+.button1:hover{
+   background-color: #71c0d4;
+}
+
+.button1 span{
+   color:#8fe3f9
+}
+
+.button2{
+   background-color: var(--primary-dark-purple);
+   width: 139px;
+}
+.download{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:1rem;  
+}
+main, footer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:2rem;
+   margin-top: 10rem;
+}
+
+main{
+   margin:10rem 2rem 0 2rem;
+}
+
+h1{
+    font-size:2.5rem;
+    line-height: 2.75rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}  
+
+h2{
+   font-size:2.5rem;
+   line-height: 2.75rem ;
+
+}
+
+.overline{
+   font-size:1rem;
+   line-height: 1.625rem ;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   color: var(--primary-dark-blue);
+   font-weight: 700;
+}
+
+.images{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap:5vw;
+   margin-bottom: 2rem;
+}
+
+.images img{
+   border-radius: 1rem;
+}
+
+.number{
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 1px solid #e4e4f1;
+   line-height: 3;
+   background-color: var(--neutral-white);
+}
+.number-wrapper{
+   position: relative;
+}
+.number::before{
+   content:'';
+   width: 1px;
+   height: 84px;
+   background-color: #e4e4f1;
+   position:absolute;
+   top: -83px;
+   left:27px;
+}
+
+footer{
+   position:relative;
+   background-image: url(./images/image-footer.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+
+}
+
+footer h2,footer p, footer button{
+   z-index: 4;
+   color:var(--neutral-white)
+}
+footer .number-wrapper{
+   z-index: 4;
+   top:-25px
+}
+
+.footer-wrap{
+   z-index: 5;
+}
+
+footer:before{
+   content:'';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height:100%;
+   background-color: rgba(77, 150,169, 0.85);
+   z-index: 2;
+}
+
+footer .button1{
+   margin-bottom: 3rem;
+   background-color: var(--primary-dark-purple);
+}
+ 
+@media(min-width:768px){
+   .images{
+      grid-template-columns: repeat(4,1fr);
+   }
+   .header-wrapper{
+      max-width: 487px;
+   }
+
+   footer{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+   
+     
+   }
+  
+}
+
+@media(min-width:1024px){
+
+   .hero{
+      display: none;
+   }
+
+   .header-wrapper{
+      display: flex;
+      flex-direction: row;
+      max-width:1504px;
+      align-items: center;   }
+
+   .left-image,.right-image{
+      display: block;
+      
+   }
+
+   .inner-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width:540px;
+      margin:0 4rem;
+   }
+
+   .download{
+      display: flex;
+      flex-direction: row;
+   }
+
+   .images{
+      gap:3vw;
+   }
+   h1{
+      font-size: 4rem;
+      line-height: 4rem;
+      max-width:445px
+   }
+
+   .footer-wrap{
+      display: flex;
+   }
+  
+}
