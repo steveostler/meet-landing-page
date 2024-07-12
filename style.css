@@ -169,6 +169,11 @@ footer .number-wrapper{
 
 .footer-wrap{
    z-index: 5;
+   display: flex;
+   gap:2rem;
+   flex-direction: column;
+   align-items: center;
+   max-width: 400px;
 }
 
 footer:before{
@@ -199,15 +204,16 @@ footer .button1{
    footer{
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: top;
-   
-     
+      background-position: top; 
+   }
+
+   .footer-wrap{
+      min-width: 573px;
    }
   
 }
 
 @media(min-width:1024px){
-
    .hero{
       display: none;
    }
@@ -219,8 +225,7 @@ footer .button1{
       align-items: center;   }
 
    .left-image,.right-image{
-      display: block;
-      
+      display: block;   
    }
 
    .inner-wrapper{
@@ -245,8 +250,16 @@ footer .button1{
       max-width:445px
    }
 
+   footer{
+      gap :0;
+   }
+
    .footer-wrap{
-      display: flex;
+      flex-direction: row;
+      max-width: 1110px;
+      padding:0 2rem 2rem 2rem;
+      text-align: left;
+      align-items: center;
    }
   
 }
